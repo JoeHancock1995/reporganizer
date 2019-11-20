@@ -1,13 +1,9 @@
 # RepOrganizer
 
-### Opportunity
+### Overview
 
-- Create an easy to use interface for developers to find and sort their Repositories from GitHub.
-
-### Solution
-
-- Leverage GitHub Rest API and GraphQL API
-- Create custom tables with relevant Repo data points for organizational flexibility
+- Reporganizer is an easy to use interface for developers to find and sort their Repositories from GitHub.
+- Using GitHub Rest API and GraphQL API to fetch and store personal Github repositories, the user can create custom tables with relevant Repo data points for organizational flexibility such as assigning tags, etc.
 
 ### Technologies
 
@@ -28,12 +24,11 @@
 
 - Model: 3 tables created with Sequelize - Repository name, URL, ID, - Tag name, color, - One to Many Repo:Tags
 
-- View: User interface to add attridbute, such as flag/color - Use API routing to point to data - Leveraging JQUERY for editing records/rows
+- View: User interface to add attribute, such as flag/color - Use API routing to point to data - Leveraging JQUERY for editing records/rows
 
 - Controller: Handles all requests - Grabs and edits data from database / tables - Pushes data to user / UI
 
 ### Detailed Flow
-
 - Use GitHub credentials to call GitHub API, pull data: respository name, url, private/public indicator,
 - Create database with sequelize and 3 tables: 1 containing GitHub API details, 1 containing tag names, and colors, and 1 that will be used to add/remove tags to repositories (a one to many table).
 - Create API routes to access the data
